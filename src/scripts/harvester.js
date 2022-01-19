@@ -4,7 +4,7 @@ export const harvestPlants = (fieldArray) => {
         let output = "";
 
         if (plant.type === "Corn") {
-            output = plant.output/2;
+            output = plant.output / 2;
             console.log(output)
         } else
         {
@@ -13,7 +13,7 @@ export const harvestPlants = (fieldArray) => {
         }
         
         for (let i=0; i < output; i++) {
-            seedObjects.push(plant)
+            seedArray.push(plant)
         }
     }
     return seedArray

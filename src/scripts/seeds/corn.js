@@ -1,6 +1,6 @@
 export const createCorn = () => {
-    const cornArray = {
-        cornObject: [
+    const cornArray = 
+[
             {
                 type: "Corn",
                 height: 180,
@@ -12,5 +12,6 @@ export const createCorn = () => {
                 output: 6
             }
         ]
-    }
+
+    return cornArray
 }    

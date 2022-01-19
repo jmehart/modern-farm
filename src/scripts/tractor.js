@@ -1,36 +1,38 @@
-import { addPlant } from "./field"
-import { createAsparagus } from "./seeds/asparagus"
-import { createCorn } from "./seeds/corn"
-import { createPotato } from "./seeds/potato"
-import { createSoybean } from "./seeds/soybean"
-import { createSunflower } from "./seeds/sunflower"
-import { createWheat } from "./seeds/wheat"
+import { addPlant } from "./field.js"
+import { createAsparagus } from "./seeds/asparagus.js"
+import { createCorn } from "./seeds/corn.js"
+import { createPotato } from "./seeds/potato.js"
+import { createSoybean } from "./seeds/soybean.js"
+import { createSunflower } from "./seeds/sunflower.js"
+import { createWheat } from "./seeds/wheat.js"
 
-export const plantSeeds = (yearlyPlanArray) => {
-    for (const row of yearlyPlanArray) {
+
+export const plantSeeds = (plan) => {
+    for (const row of plan) {
         for (const plant of row) {
             // if plant type = plantSeedFunction
             // createPlant()
             // add seed to fieldArray
-            if (plant.type === "Asparagus") {
+            if (plant === "Asparagus") {
                 const asparagusSeed = createAsparagus()
                 addPlant(asparagusSeed)
-            } else if (plant.type === "Corn") {            
+            } else if (plant === "Corn") {            
                 const cornSeed = createCorn()
                 addPlant(cornSeed) 
-            } else if (plant.type === "Soybean") {
+            } else if (plant === "Soybean") {
                 const soybeanSeed = createSoybean()
                 addPlant(soybeanSeed)
-            } else if (plant.type === "Sunflower") {
+            } else if (plant === "Sunflower") {
                 const sunflowerSeed = createSunflower()
                 addPlant(sunflowerSeed)
-            } else if (plant.type === "Wheat") {
+            } else if (plant === "Wheat") {
                 const wheatSeed = createWheat()
                 addPlant(wheatSeed)
-            } else if (plant.type === "Potato") {
+            } else if (plant === "Potato") {
                 const potatoSeed = createPotato()
                 addPlant(potatoSeed)
             }
         }
     }
+
 }

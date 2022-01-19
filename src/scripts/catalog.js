@@ -1,5 +1,9 @@
-export const catalog = (harvestedPlants) => {
-    for (const food of harvestedPlants) {
-        return `<section class = "plant">${food.type}</section>`
+export const catalog = (harvestedFoodArray) => {
+    let templateString = ""
+    for (const food of harvestedFoodArray) {
+        templateString += `<section class ="plant">${food.type}</section>`
     }
+    return templateString
 }
+
+
